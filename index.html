@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      R A Design Studio | Architecture, Interior &amp; Engineering Consultancy,
+      Dubai, UAE
+    </title>
+    <meta
+      name="description"
+      content="R A Design Studio is a Dubai architecture, interior and engineering consultancy delivering architectural design, interior design, structural engineering, MEP design, BIM modelling, and fire and life safety services compliant with Dubai Municipality and Civil Defence standards."
+    />
+    <meta name="theme-color" content="#0B132B" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 30 16 4l14 26z' fill='%23C4894F'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: "#0B132B",
+              ink: "#0F172A",
+              gold: "#C4894F",
+              "gold-d": "#94602B",
+              sand: "#F5F1EC",
+            },
+            fontFamily: {
+              head: ["Plus Jakarta Sans", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .btn-g {
+          @apply inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-6 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-white disabled:cursor-not-allowed disabled:opacity-60;
+        }
+        .btn-o {
+          @apply inline-flex items-center justify-center gap-2 rounded-sm border border-slate-500 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-gold hover:text-gold;
+        }
+        .eyebrow {
+          @apply text-[11px] font-semibold uppercase tracking-[.28em];
+        }
+        .fld {
+          @apply w-full rounded-sm border border-slate-300 bg-white px-3.5 py-3 text-sm text-ink placeholder:text-slate-400 focus:border-gold-d focus:outline-none aria-[invalid=true]:border-red-600;
+        }
+        .lbl {
+          @apply mb-1.5 block text-xs font-semibold text-slate-700;
+        }
+        .err {
+          @apply mt-1 min-h-[1rem] text-xs text-red-700;
+        }
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 5.5rem;
+      }
+      :focus-visible {
+        outline: 2px solid #c4894f;
+        outline-offset: 2px;
+      }
+      .grid-bg {
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 64px 64px;
+      }
+      .t1 {
+        background-image:
+          repeating-linear-gradient(
+            90deg,
+            rgba(196, 137, 79, 0.16) 0 1px,
+            transparent 1px 26px
+          ),
+          linear-gradient(180deg, #17223f, #0b132b);
+      }
+      .t2 {
+        background-image:
+          repeating-linear-gradient(
+            45deg,
+            rgba(196, 137, 79, 0.16) 0 1px,
+            transparent 1px 22px
+          ),
+          linear-gradient(180deg, #1a2438, #0b132b);
+      }
+      .t3 {
+        background-image:
+          linear-gradient(rgba(196, 137, 79, 0.14) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(196, 137, 79, 0.14) 1px, transparent 1px),
+          linear-gradient(180deg, #1c2540, #0b132b);
+        background-size:
+          32px 32px,
+          32px 32px,
+          100% 100%;
+      }
+      #drawer {
+        visibility: hidden;
+      }
+      #drawer.open {
+        visibility: visible;
+      }
+      #drawer .panel {
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      }
+      #drawer.open .panel {
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white font-sans text-slate-700 antialiased">
+    <svg width="0" height="0" class="absolute" aria-hidden="true">
+      <symbol id="logo" viewBox="0 0 72 44">
+        <path
+          d="M3 42V24l4-3.500V42zM12 42V14l4-3.500V42z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        />
+        <path
+          d="M21 42V3l20 14q3 5-1 10-2 3-6 3H27M33 30l9 12"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.500"
+          stroke-linejoin="round"
+        />
+        <path d="M43 42 56 14 69 42z" fill="#C4894F" />
+        <path d="M52 42l4-9 4 9z" fill="var(--cut,#fff)" />
+      </symbol>
+    </svg>
+
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-[70] focus:bg-gold focus:px-4 focus:py-2 focus:text-navy"
+      >Skip to content</a
+    >
+
+    <div class="bg-navy text-xs text-slate-300">
+      <div
+        class="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-5 py-2.5 lg:px-10"
+      >
+        <ul class="flex flex-wrap items-center gap-x-6 gap-y-1">
+          <li>
+            <a
+              href="tel:+97140000000"
+              class="flex items-center gap-2 hover:text-white"
+              ><i data-lucide="phone" class="h-3.5 w-3.5 text-gold"></i>+971 4
+              000 0000</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:info@radesignstudio.ae"
+              class="flex items-center gap-2 hover:text-white"
+              ><i data-lucide="mail" class="h-3.5 w-3.5 text-gold"></i
+              >info@radesignstudio.ae</a
+            >
+          </li>
+          <li class="hidden items-center gap-2 md:flex">
+            <i data-lucide="clock" class="h-3.5 w-3.5 text-gold"></i>Sunday to
+            Thursday, 8:30 to 17:30 GST
+          </li>
+        </ul>
+        <a
+          href="#inquiry"
+          class="flex items-center gap-2 font-semibold text-white hover:text-gold"
+          ><span class="relative flex h-2 w-2"
+            ><span
+              class="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"
+            ></span
+            ><span
+              class="relative inline-flex h-2 w-2 rounded-full bg-amber-400"
+            ></span></span
+          >Emergency / RFP desk</a
+        >
+      </div>
+    </div>
+
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white">
+      <div
+        class="mx-auto flex h-20 max-w-screen-2xl items-center justify-between px-5 lg:px-10"
+      >
+        <a
+          href="#home"
+          class="flex items-center gap-3"
+          aria-label="R A Design Studio, home"
+        >
+          <svg
+            class="h-11 w-[68px] text-[#6B6E70]"
+            viewBox="0 0 72 44"
+            aria-hidden="true"
+          >
+            <use href="#logo" />
+          </svg>
+          <span class="leading-none"
+            ><b
+              class="block font-head text-[15px] font-extrabold tracking-[.14em] text-gold"
+              >R A DESIGN STUDIO</b
+            ><span
+              class="mt-1.5 block text-[8px] tracking-[.2em] text-slate-500"
+              >WHERE VISION MEETS ENGINEERING</span
+            ></span
+          >
+        </a>
+        <nav
+          class="hidden items-center gap-9 text-sm font-medium lg:flex"
+          aria-label="Primary"
+        >
+          <a href="#home" class="border-b-2 border-gold py-1 text-gold-d"
+            >Home</a
+          >
+          <a href="#about" class="hover:text-gold-d">About Us</a>
+          <div class="group relative flex h-20 items-center">
+            <button
+              type="button"
+              class="flex items-center gap-1.5 hover:text-gold-d"
+              aria-haspopup="true"
+            >
+              Services <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            </button>
+            <ul
+              class="invisible absolute left-0 top-full w-64 border border-slate-200 bg-white py-2 opacity-0 shadow-lg transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100"
+            >
+              <li>
+                <a
+                  href="#services"
+                  class="block px-5 py-2.5 hover:bg-sand hover:text-gold-d"
+                  >Architecture</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="block px-5 py-2.5 hover:bg-sand hover:text-gold-d"
+                  >Interior Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="block px-5 py-2.5 hover:bg-sand hover:text-gold-d"
+                  >Structural Engineering</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="block px-5 py-2.5 hover:bg-sand hover:text-gold-d"
+                  >MEP Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="block px-5 py-2.5 hover:bg-sand hover:text-gold-d"
+                  >BIM Modelling</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="block px-5 py-2.5 hover:bg-sand hover:text-gold-d"
+                  >Fire &amp; Life Safety</a
+                >
+              </li>
+            </ul>
+          </div>
+          <a href="projects.html" class="hover:text-gold-d"
+            >Sectors / Projects</a
+          >
+          <a href="#inquiry" class="hover:text-gold-d">Contact</a>
+        </nav>
+        <a href="#inquiry" class="btn-g hidden lg:inline-flex"
+          >Request Technical RFP
+          <i data-lucide="arrow-right" class="h-4 w-4"></i
+        ></a>
+        <button
+          id="menu"
+          type="button"
+          class="flex h-11 w-11 items-center justify-center border border-slate-300 lg:hidden"
+          aria-label="Open menu"
+          aria-controls="drawer"
+          aria-expanded="false"
+        >
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+    </header>
+
+    <div
+      id="drawer"
+      class="fixed inset-0 z-[60] lg:hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile menu"
+    >
+      <div class="absolute inset-0 bg-navy/70" data-close></div>
+      <div
+        class="panel absolute right-0 top-0 flex h-full w-[88%] max-w-sm flex-col overflow-y-auto bg-white"
+      >
+        <div
+          class="flex h-20 items-center justify-between border-b border-slate-200 px-5"
+        >
+          <span
+            class="font-head text-sm font-extrabold tracking-[.14em] text-gold"
+            >R A DESIGN STUDIO</span
+          >
+          <button
+            type="button"
+            class="flex h-11 w-11 items-center justify-center border border-slate-300"
+            data-close
+            aria-label="Close menu"
+          >
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+        <nav class="flex-1 px-5 py-4 text-base font-medium" aria-label="Mobile">
+          <a
+            href="#home"
+            class="block border-b border-slate-200 py-4 text-gold-d"
+            >Home</a
+          >
+          <a href="#about" class="block border-b border-slate-200 py-4"
+            >About Us</a
+          >
+          <button
+            id="acc"
+            type="button"
+            class="flex w-full items-center justify-between border-b border-slate-200 py-4"
+            aria-expanded="false"
+            aria-controls="sub"
+          >
+            Services
+            <i
+              data-lucide="chevron-down"
+              class="h-5 w-5 transition-transform"
+            ></i>
+          </button>
+          <ul
+            id="sub"
+            class="hidden border-b border-slate-200 bg-sand px-4 py-2 text-sm"
+          >
+            <li>
+              <a href="#services" class="block py-2.5">Architecture</a>
+            </li>
+            <li>
+              <a href="#services" class="block py-2.5">Interior Design</a>
+            </li>
+            <li>
+              <a href="#services" class="block py-2.5"
+                >Structural Engineering</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="block py-2.5">MEP Design</a>
+            </li>
+            <li>
+              <a href="#services" class="block py-2.5">BIM Modelling</a>
+            </li>
+            <li>
+              <a href="#services" class="block py-2.5"
+                >Fire &amp; Life Safety</a
+              >
+            </li>
+          </ul>
+          <a href="projects.html" class="block border-b border-slate-200 py-4"
+            >Sectors / Projects</a
+          >
+          <a href="#inquiry" class="block border-b border-slate-200 py-4"
+            >Contact</a
+          >
+        </nav>
+        <div class="p-5">
+          <a href="#inquiry" class="btn-g w-full"
+            >Consult an Engineer
+            <i data-lucide="arrow-right" class="h-4 w-4"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <section id="home" class="relative overflow-hidden bg-navy text-white">
+        <div class="grid-bg absolute inset-0" aria-hidden="true"></div>
+        <div
+          class="relative mx-auto grid max-w-screen-2xl items-center gap-10 px-5 pb-16 pt-14 lg:grid-cols-12 lg:px-10 lg:pb-24 lg:pt-24"
+        >
+          <div class="lg:col-span-7">
+            <p class="eyebrow text-gold">
+              Integrated design &amp; engineering, Dubai
+            </p>
+            <h1
+              class="mt-6 font-head text-4xl font-extrabold leading-[1.06] sm:text-5xl xl:text-7xl"
+            >
+              Designing the Future of
+              <span class="block text-gold">Infrastructure </span>
+            </h1>
+            <span class="mt-8 block h-px w-14 bg-gold"></span>
+            <p
+              class="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg"
+            >
+              Technical precision from concept to handover. We design and
+              supervise high-rise, industrial, and residential assets that clear
+              municipal and civil defense reviews the first time, and are
+              delivered at scale
+            </p>
+
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="#services" class="btn-g"
+                >Explore Our Capabilities
+                <i data-lucide="arrow-right" class="h-4 w-4"></i
+              ></a>
+              <a href="#projects" class="btn-o">View Sectors</a>
+            </div>
+          </div>
+          <div class="hidden lg:col-span-5 lg:block" aria-hidden="true">
+            <svg viewBox="0 0 430 460" class="w-full">
+              <defs>
+                <pattern
+                  id="w"
+                  width="14"
+                  height="18"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M0 0H14M0 0V18"
+                    stroke="#334155"
+                    stroke-width=".8"
+                    fill="none"
+                  />
+                </pattern>
+              </defs>
+              <g fill="url(#w)" stroke="#94A3B8" stroke-width="1.2">
+                <rect x="30" y="250" width="70" height="170" />
+                <rect x="120" y="90" width="90" height="330" />
+                <rect x="230" y="170" width="76" height="250" />
+                <rect x="326" y="300" width="56" height="120" />
+              </g>
+              <g stroke="#C4894F" fill="none" stroke-width="1.2">
+                <path d="M165 90V36M10 420H420" stroke-width="1.6" />
+                <path
+                  d="M410 36V420M404 36h12M404 420h12"
+                  stroke-dasharray="3 3"
+                />
+                <path d="M120 250h-20M230 250h-20" stroke-dasharray="2 3" />
+              </g>
+              <g fill="#C4894F" font-family="Inter" font-size="10">
+                <text x="176" y="40">+312.00 m</text>
+                <text x="12" y="440">GL ±0.00</text>
+                <text x="318" y="440">DM approved grid A-F</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="py-16 lg:py-24">
+        <div class="mx-auto max-w-screen-2xl px-5 lg:px-10">
+          <div class="grid gap-6 lg:grid-cols-2 lg:items-end">
+            <div>
+              <p class="eyebrow text-gold-d">Our services</p>
+              <h2
+                class="mt-3 font-head text-3xl font-bold text-ink sm:text-4xl"
+              >
+                Comprehensive design &amp; engineering services
+              </h2>
+            </div>
+            <p class="max-w-xl text-sm leading-relaxed lg:justify-self-end">
+              From concept design to authority approval, one multidisciplinary
+              team coordinates every discipline against UAE codes and authority
+              submission requirements.
+            </p>
+          </div>
+          <div
+            class="mt-12 grid gap-px border border-slate-200 bg-slate-200 md:grid-cols-2 lg:grid-cols-3"
+          >
+            <article
+              class="group flex flex-col justify-between bg-white p-8 transition-colors hover:bg-sand"
+            >
+              <div>
+                <i
+                  data-lucide="drafting-compass"
+                  class="h-8 w-8 stroke-[1.5] text-gold-d"
+                ></i>
+                <h3 class="mt-6 font-head text-lg font-bold text-ink">
+                  Architecture Services
+                </h3>
+                <p class="mt-3 text-sm leading-relaxed">
+                  Efficiency in design and mindful material moderation,
+                  developing functional spaces compliant with local and
+                  international codes across Concept Design, Schematic Design,
+                  Detail Design Development, and 3D Visualization.
+                </p>
+              </div>
+              <a
+                href="#inquiry"
+                class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-d"
+                >Learn More
+                <span class="transition-transform group-hover:translate-x-1"
+                  >→</span
+                ></a
+              >
+            </article>
+            <article
+              class="group flex flex-col justify-between bg-white p-8 transition-colors hover:bg-sand"
+            >
+              <div>
+                <i
+                  data-lucide="armchair"
+                  class="h-8 w-8 stroke-[1.5] text-gold-d"
+                ></i>
+                <h3 class="mt-6 font-head text-lg font-bold text-ink">
+                  Interior Design
+                </h3>
+                <p class="mt-3 text-sm leading-relaxed">
+                  Our Interior design works has effeciency in design and
+                  moderation on use of materials, developing spaces by using
+                  various building information and local/international codes
+                  across Concept Design, ⁠Schematic Design, ⁠Detail Design
+                  Development ,3D visualization.
+                </p>
+              </div>
+              <a
+                href="#inquiry"
+                class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-d"
+                >Learn More
+                <span class="transition-transform group-hover:translate-x-1"
+                  >→</span
+                ></a
+              >
+            </article>
+            <article
+              class="group flex flex-col justify-between bg-white p-8 transition-colors hover:bg-sand"
+            >
+              <div>
+                <i
+                  data-lucide="building-2"
+                  class="h-8 w-8 stroke-[1.5] text-gold-d"
+                ></i>
+                <h3 class="mt-6 font-head text-lg font-bold text-ink">
+                  Structural Engineering
+                </h3>
+                <p class="mt-3 text-sm leading-relaxed">
+                  Foundation and superstructure design, analysis and
+                  optimisation, with authority-ready drawings for towers,
+                  commercial and residential assets.
+                </p>
+              </div>
+              <a
+                href="#inquiry"
+                class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-d"
+                >Learn More
+                <span class="transition-transform group-hover:translate-x-1"
+                  >→</span
+                ></a
+              >
+            </article>
+            <article
+              class="group flex flex-col justify-between bg-white p-8 transition-colors hover:bg-sand"
+            >
+              <div>
+                <i
+                  data-lucide="zap"
+                  class="h-8 w-8 stroke-[1.5] text-gold-d"
+                ></i>
+                <h3 class="mt-6 font-head text-lg font-bold text-ink">
+                  MEP Design
+                </h3>
+                <p class="mt-3 text-sm leading-relaxed">
+                  Comprehensive HVAC, electrical, plumbing and drainage
+                  engineering designed for peak operational performance and UAE
+                  code compliance.
+                </p>
+              </div>
+              <a
+                href="#inquiry"
+                class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-d"
+                >Learn More
+                <span class="transition-transform group-hover:translate-x-1"
+                  >→</span
+                ></a
+              >
+            </article>
+            <article
+              class="group flex flex-col justify-between bg-white p-8 transition-colors hover:bg-sand"
+            >
+              <div>
+                <i
+                  data-lucide="workflow"
+                  class="h-8 w-8 stroke-[1.5] text-gold-d"
+                ></i>
+                <h3 class="mt-6 font-head text-lg font-bold text-ink">
+                  BIM Modelling
+                </h3>
+                <p class="mt-3 text-sm leading-relaxed">
+                  Federated 3D models, parametric coordination, clash detection
+                  and detailed multidisciplinary shop drawings before tender.
+                </p>
+              </div>
+              <a
+                href="#inquiry"
+                class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-d"
+                >Learn More
+                <span class="transition-transform group-hover:translate-x-1"
+                  >→</span
+                ></a
+              >
+            </article>
+            <article
+              class="group flex flex-col justify-between bg-white p-8 transition-colors hover:bg-sand"
+            >
+              <div>
+                <i
+                  data-lucide="flame"
+                  class="h-8 w-8 stroke-[1.5] text-gold-d"
+                ></i>
+                <h3 class="mt-6 font-head text-lg font-bold text-ink">
+                  Fire &amp; Life Safety
+                </h3>
+                <p class="mt-3 text-sm leading-relaxed">
+                  Code compliance, means of egress and protection systems
+                  aligned to the UAE Fire and Life Safety Code and Civil Defence
+                  approval.
+                </p>
+              </div>
+              <a
+                href="#inquiry"
+                class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-d"
+                >Learn More
+                <span class="transition-transform group-hover:translate-x-1"
+                  >→</span
+                ></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="bg-navy py-16 text-white lg:py-24">
+        <div class="mx-auto max-w-screen-2xl px-5 lg:px-10">
+          <div
+            class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end"
+          >
+            <div>
+              <p class="eyebrow text-gold">Sectors &amp; projects</p>
+              <h2
+                class="mt-3 max-w-2xl font-head text-3xl font-bold sm:text-4xl"
+              >
+                Designing for a safer, smarter and more sustainable tomorrow
+              </h2>
+            </div>
+            <div class="flex flex-wrap items-center gap-6">
+              <a
+                href="projects.html"
+                class="inline-flex items-center gap-2 border-b border-gold pb-1 text-sm font-semibold text-gold hover:text-white"
+                >Explore All Projects &amp; Gallery
+                <i data-lucide="arrow-right" class="h-4 w-4"></i
+              ></a>
+              <a
+                href="#inquiry"
+                class="inline-flex items-center gap-2 border-b border-slate-500 pb-1 text-sm font-semibold text-slate-300 hover:text-white"
+                >Discuss your project
+                <i data-lucide="arrow-right" class="h-4 w-4"></i
+              ></a>
+            </div>
+          </div>
+          <div class="mt-12 grid gap-6 md:grid-cols-3">
+            <a
+              href="projects.html"
+              class="group relative flex aspect-[4/5] flex-col justify-between overflow-hidden rounded-sm border border-slate-700/60 p-7 transition-colors hover:border-gold/60 md:aspect-[3/4]"
+            >
+              <img
+                src="images/projects/commercial-office.jpg"
+                alt="Commercial Office Project, Doha Qatar"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-navy via-navy/85 to-navy/40 transition-opacity duration-300 group-hover:via-navy/75"
+              ></div>
+              <div class="relative z-10 flex h-full flex-col justify-between">
+                <div class="flex items-center justify-between">
+                  <i
+                    data-lucide="building"
+                    class="h-10 w-10 stroke-[1.25] text-gold"
+                  ></i>
+                  <span
+                    class="rounded border border-gold/40 bg-navy/80 px-2.5 py-1 text-[11px] font-semibold tracking-wider text-gold backdrop-blur-sm"
+                  >
+                    Doha, Qatar
+                  </span>
+                </div>
+                <div>
+                  <h3 class="mt-2 font-head text-2xl font-bold text-white">
+                    Commercial High-Rise &amp; Office
+                  </h3>
+                  <span
+                    class="mt-5 flex h-10 w-10 items-center justify-center rounded-full border border-slate-400 bg-navy/60 text-white backdrop-blur-sm transition-all duration-300 group-hover:border-gold group-hover:bg-gold group-hover:text-navy"
+                    ><i data-lucide="arrow-right" class="h-4 w-4"></i
+                  ></span>
+                </div>
+              </div>
+            </a>
+            <a
+              href="projects.html"
+              class="group relative flex aspect-[4/5] flex-col justify-between overflow-hidden rounded-sm border border-slate-700/60 p-7 transition-colors hover:border-gold/60 md:aspect-[3/4]"
+            >
+              <img
+                src="images/projects/lng-pump-station.jpg"
+                alt="LNG & Clean Energy Fueling Station Infrastructure"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-navy via-navy/85 to-navy/40 transition-opacity duration-300 group-hover:via-navy/75"
+              ></div>
+              <div class="relative z-10 flex h-full flex-col justify-between">
+                <div class="flex items-center justify-between">
+                  <i
+                    data-lucide="factory"
+                    class="h-10 w-10 stroke-[1.25] text-gold"
+                  ></i>
+                  <span
+                    class="rounded border border-gold/40 bg-navy/80 px-2.5 py-1 text-[11px] font-semibold tracking-wider text-gold backdrop-blur-sm"
+                  >
+                    Clean Energy / LNG
+                  </span>
+                </div>
+                <div>
+                  <h3 class="mt-2 font-head text-2xl font-bold text-white">
+                    Industrial Infrastructure
+                  </h3>
+                  <span
+                    class="mt-5 flex h-10 w-10 items-center justify-center rounded-full border border-slate-400 bg-navy/60 text-white backdrop-blur-sm transition-all duration-300 group-hover:border-gold group-hover:bg-gold group-hover:text-navy"
+                    ><i data-lucide="arrow-right" class="h-4 w-4"></i
+                  ></span>
+                </div>
+              </div>
+            </a>
+            <a
+              href="projects.html"
+              class="group relative flex aspect-[4/5] flex-col justify-between overflow-hidden rounded-sm border border-slate-700/60 p-7 transition-colors hover:border-gold/60 md:aspect-[3/4]"
+            >
+              <img
+                src="images/projects/luxury-villa.jpg"
+                alt="Luxury Villa Residential Architecture, Doha Qatar"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-navy via-navy/85 to-navy/40 transition-opacity duration-300 group-hover:via-navy/75"
+              ></div>
+              <div class="relative z-10 flex h-full flex-col justify-between">
+                <div class="flex items-center justify-between">
+                  <i
+                    data-lucide="home"
+                    class="h-10 w-10 stroke-[1.25] text-gold"
+                  ></i>
+                  <span
+                    class="rounded border border-gold/40 bg-navy/80 px-2.5 py-1 text-[11px] font-semibold tracking-wider text-gold backdrop-blur-sm"
+                  >
+                    Doha, Qatar
+                  </span>
+                </div>
+                <div>
+                  <h3 class="mt-2 font-head text-2xl font-bold text-white">
+                    Luxury Residential
+                  </h3>
+                  <span
+                    class="mt-5 flex h-10 w-10 items-center justify-center rounded-full border border-slate-400 bg-navy/60 text-white backdrop-blur-sm transition-all duration-300 group-hover:border-gold group-hover:bg-gold group-hover:text-navy"
+                    ><i data-lucide="arrow-right" class="h-4 w-4"></i
+                  ></span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="mt-12 flex justify-center">
+            <a href="projects.html" class="btn-g"
+              >View Full Portfolio
+              <i data-lucide="arrow-right" class="h-4 w-4"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="inquiry" class="bg-sand py-16 lg:py-24">
+        <div
+          class="mx-auto grid max-w-screen-2xl border border-slate-300 bg-white lg:grid-cols-5 lg:mx-10 2xl:mx-auto"
+        >
+          <div class="bg-ink p-8 text-white lg:col-span-2 lg:p-12">
+            <p class="eyebrow text-gold">Let's build together</p>
+            <h2 class="mt-3 font-head text-3xl font-bold">
+              Turn your vision into reality
+            </h2>
+            <p class="mt-4 text-sm leading-relaxed text-slate-300">
+              Send us your scope. A senior engineer reviews every inquiry and
+              replies within one working day.
+            </p>
+            <ul
+              class="mt-8 space-y-4 border-t border-slate-700 pt-8 text-sm text-slate-300"
+            >
+              <li class="flex gap-3">
+                <i data-lucide="phone" class="h-4 w-4 shrink-0 text-gold"></i
+                >+971 4 000 0000
+              </li>
+              <li class="flex gap-3">
+                <i data-lucide="mail" class="h-4 w-4 shrink-0 text-gold"></i
+                >info@radesignstudio.ae
+              </li>
+              <li class="flex gap-3">
+                <i data-lucide="map-pin" class="h-4 w-4 shrink-0 text-gold"></i
+                >Business Bay, Dubai, United Arab Emirates
+              </li>
+            </ul>
+          </div>
+          <div class="p-8 lg:col-span-3 lg:p-12">
+            <div
+              id="ok"
+              class="hidden border border-emerald-600 bg-emerald-50 p-5 text-sm text-emerald-900"
+              role="status"
+              tabindex="-1"
+            >
+              <b>Inquiry received.</b> An engineer will contact you within one
+              working day.
+            </div>
+            <form
+              id="rfp"
+              novalidate
+              class="grid gap-x-5 gap-y-4 sm:grid-cols-2"
+            >
+              <div>
+                <label class="lbl" for="name">Full name</label
+                ><input
+                  class="fld"
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                  aria-describedby="e-name"
+                />
+                <p class="err" id="e-name" role="alert"></p>
+              </div>
+              <div>
+                <label class="lbl" for="email">Corporate email</label
+                ><input
+                  class="fld"
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  aria-describedby="e-email"
+                />
+                <p class="err" id="e-email" role="alert"></p>
+              </div>
+              <div>
+                <label class="lbl" for="phone">Phone</label>
+                <div class="flex gap-2">
+                  <select
+                    class="fld !w-28 shrink-0"
+                    name="dial"
+                    aria-label="Country dial code"
+                  >
+                    <option>+971</option>
+                    <option>+966</option>
+                    <option>+974</option>
+                    <option>+968</option>
+                    <option>+973</option>
+                    <option>+965</option>
+                    <option>+91</option>
+                    <option>+44</option>
+                  </select>
+                  <input
+                    class="fld"
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    inputmode="tel"
+                    autocomplete="tel-national"
+                    placeholder="50 123 4567"
+                    required
+                    aria-describedby="e-phone"
+                  />
+                </div>
+                <p class="err" id="e-phone" role="alert"></p>
+              </div>
+              <div>
+                <label class="lbl" for="service">Service required</label>
+                <select
+                  class="fld"
+                  id="service"
+                  name="service"
+                  required
+                  aria-describedby="e-service"
+                >
+                  <option value="">Select a service</option>
+                  <option>Architecture Services</option>
+                  <option>Interior Design</option>
+                  <option>Structural Engineering</option>
+                  <option>MEP Design</option>
+                  <option>BIM Modelling</option>
+                  <option>Fire &amp; Life Safety</option>
+                </select>
+                <p class="err" id="e-service" role="alert"></p>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="lbl" for="timeline"
+                  >Estimated project timeline</label
+                >
+                <select class="fld" id="timeline" name="timeline">
+                  <option>Not yet defined</option>
+                  <option>Starting within 1 month</option>
+                  <option>1 to 3 months</option>
+                  <option>3 to 6 months</option>
+                  <option>6 months or later</option>
+                </select>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="lbl" for="message">Project scope</label
+                ><textarea
+                  class="fld"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Location, building type, approximate GFA and the stage you are at."
+                  required
+                  aria-describedby="e-message"
+                ></textarea>
+                <p class="err" id="e-message" role="alert"></p>
+              </div>
+              <div class="sm:col-span-2">
+                <button id="send" type="submit" class="btn-g w-full sm:w-auto">
+                  <span id="sendTxt">Send inquiry</span>
+                  <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a
+      href="https://wa.me/971500000000?text=Hello%20R%20A%20Design%20Studio%2C%20I%20would%20like%20to%20discuss%20an%20engineering%20project."
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat with us on WhatsApp"
+      class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105"
+      ><i data-lucide="message-circle" class="h-6 w-6"></i
+    ></a>
+
+    <footer class="bg-ink text-sm text-slate-400" style="--cut: #0f172a">
+      <div
+        class="mx-auto grid max-w-screen-2xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-12 lg:px-10"
+      >
+        <div id="about" class="lg:col-span-5">
+          <a
+            href="#home"
+            class="flex items-center gap-3"
+            aria-label="R A Design Studio, home"
+          >
+            <svg
+              class="h-11 w-[68px] text-slate-400"
+              viewBox="0 0 72 44"
+              aria-hidden="true"
+            >
+              <use href="#logo" />
+            </svg>
+            <b
+              class="font-head text-[15px] font-extrabold tracking-[.14em] text-gold"
+              >R A DESIGN STUDIO</b
+            >
+          </a>
+          <div
+            class="mt-5 max-w-lg space-y-3 text-xs leading-relaxed text-slate-300"
+          >
+            <h3 class="font-head text-sm font-bold text-white">About Us</h3>
+            <p>
+              <strong class="font-semibold text-gold">Goal:</strong> We are
+              committed in providing high quality standard Architecture,
+              Interior &amp; Engineering consultancy services in line to the
+              present market demands and client expectations. Create economical
+              and innovative designs using the most up to date advance tech to
+              ensure efficiency and value for money of our clients.
+            </p>
+            <p>
+              <strong class="font-semibold text-gold">Vision:</strong> To become
+              benchmark consultancy firm for Architecture, Interior and
+              Engineering service to our clients in UAE, KSA &amp; GCC
+              countries. R A Design provides innovative designs driven by
+              integrity, teamwork of our professional team.
+            </p>
+          </div>
+        </div>
+        <div class="lg:col-span-2">
+          <h3 class="font-head text-sm font-bold text-white">Quick Links</h3>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#home" class="hover:text-gold">Home</a></li>
+            <li><a href="#about" class="hover:text-gold">About Us</a></li>
+            <li>
+              <a href="projects.html" class="hover:text-gold"
+                >Sectors / Projects</a
+              >
+            </li>
+            <li><a href="#inquiry" class="hover:text-gold">Contact</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-2">
+          <h3 class="font-head text-sm font-bold text-white">Services</h3>
+          <ul class="mt-4 space-y-2.5">
+            <li>
+              <a href="#services" class="hover:text-gold"
+                >Architecture Services</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="hover:text-gold">Interior Design</a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-gold"
+                >Structural Engineering</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="hover:text-gold">MEP Design</a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-gold">BIM Modelling</a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-gold"
+                >Fire &amp; Life Safety</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <h3 class="font-head text-sm font-bold text-white">
+            Registered office
+          </h3>
+          <address class="mt-4 space-y-2.5 not-italic">
+            <p>
+              Office 1204, Business Bay, Dubai, United Arab Emirates<br />P.O.
+              Box 000000
+            </p>
+            <p>
+              <a href="tel:+97140000000" class="hover:text-gold"
+                >+971 4 000 0000</a
+              ><br /><a
+                href="mailto:info@radesignstudio.ae"
+                class="hover:text-gold"
+                >info@radesignstudio.ae</a
+              >
+            </p>
+            <p>Sunday to Thursday, 8:30 to 17:30 GST</p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-slate-800">
+        <div
+          class="mx-auto flex max-w-screen-2xl flex-col gap-3 px-5 py-6 text-xs lg:flex-row lg:justify-between lg:px-10"
+        >
+          <p class="max-w-3xl">
+            Information on this website is general in nature and is not a
+            professional engineering opinion or a contractual offer. All designs
+            remain subject to the approval of the relevant UAE authorities.
+          </p>
+          <p class="shrink-0">© 2026 R A Design Studio. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+      const $ = (s) => document.querySelector(s);
+      const drawer = $("#drawer"),
+        menu = $("#menu");
+      const toggle = (open) => {
+        drawer.classList.toggle("open", open);
+        menu.setAttribute("aria-expanded", open);
+        document.body.classList.toggle("overflow-hidden", open);
+      };
+      menu.addEventListener("click", () => toggle(true));
+      drawer.addEventListener("click", (e) => {
+        if (e.target.closest("[data-close]") || e.target.closest("a"))
+          toggle(false);
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") toggle(false);
+      });
+      $("#acc").addEventListener("click", (e) => {
+        const hidden = $("#sub").classList.toggle("hidden");
+        e.currentTarget.setAttribute("aria-expanded", !hidden);
+        e.currentTarget
+          .querySelector("svg")
+          .classList.toggle("rotate-180", !hidden);
+      });
+
+      const form = $("#rfp");
+      const rules = {
+        name: (v) => v.trim().length >= 3 || "Enter your full name.",
+        email: (v) =>
+          /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ||
+          "Enter a valid corporate email address.",
+        phone: (v) =>
+          /^\d{7,10}$/.test(v.replace(/[\s-]/g, "")) ||
+          "Enter 7 to 10 digits, without the country code.",
+        service: (v) => !!v || "Select the service you need.",
+        message: (v) =>
+          v.trim().length >= 20 ||
+          "Describe your scope in at least 20 characters.",
+      };
+      const check = (n) => {
+        const el = form.elements[n],
+          r = rules[n](el.value);
+        $("#e-" + n).textContent = r === true ? "" : r;
+        el.setAttribute("aria-invalid", r !== true);
+        return r === true;
+      };
+      Object.keys(rules).forEach((n) => {
+        form.elements[n].addEventListener("blur", () => check(n));
+        form.elements[n].addEventListener("input", () => {
+          if (form.elements[n].getAttribute("aria-invalid") === "true")
+            check(n);
+        });
+      });
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const valid = Object.keys(rules).map(check).every(Boolean);
+        if (!valid) {
+          form.querySelector('[aria-invalid="true"]').focus();
+          return;
+        }
+        const btn = $("#send");
+        btn.disabled = true;
+        btn.setAttribute("aria-busy", "true");
+        $("#sendTxt").textContent = "Sending inquiry";
+        setTimeout(() => {
+          form.reset();
+          btn.disabled = false;
+          btn.removeAttribute("aria-busy");
+          $("#sendTxt").textContent = "Send inquiry";
+          const ok = $("#ok");
+          ok.classList.remove("hidden");
+          ok.classList.add("mb-6");
+          ok.focus();
+        }, 900);
+      });
+    </script>
+  </body>
+</html>

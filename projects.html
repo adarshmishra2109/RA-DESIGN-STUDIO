@@ -1,0 +1,2021 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Projects | R A Design Studio, Architecture, Interior &amp; Engineering
+      Consultancy
+    </title>
+    <meta
+      name="description"
+      content="Explore selected R A Design Studio projects across Qatar, India, and Oman: commercial high-rises, hospitality, luxury villas, residential, and clean energy infrastructure delivered from Dubai."
+    />
+    <meta name="theme-color" content="#0B132B" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 30 16 4l14 26z' fill='%23C4894F'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: "#0B132B",
+              ink: "#0F172A",
+              gold: "#C4894F",
+              "gold-d": "#94602B",
+              sand: "#F5F1EC",
+            },
+            fontFamily: {
+              head: ["Plus Jakarta Sans", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .btn-g {
+          @apply inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-6 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-white disabled:cursor-not-allowed disabled:opacity-60;
+        }
+        .btn-o {
+          @apply inline-flex items-center justify-center gap-2 rounded-sm border border-slate-500 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-gold hover:text-gold;
+        }
+        .eyebrow {
+          @apply text-[11px] font-semibold uppercase tracking-[.28em];
+        }
+        .fld {
+          @apply w-full rounded-sm border border-slate-300 bg-white px-3.5 py-3 text-sm text-ink placeholder:text-slate-400 focus:border-gold-d focus:outline-none aria-[invalid=true]:border-red-600;
+        }
+        .lbl {
+          @apply mb-1.5 block text-xs font-semibold text-slate-700;
+        }
+        .err {
+          @apply mt-1 min-h-[1rem] text-xs text-red-700;
+        }
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 5.5rem;
+      }
+      :focus-visible {
+        outline: 2px solid #c4894f;
+        outline-offset: 2px;
+      }
+      .grid-bg {
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 64px 64px;
+      }
+      .t1 {
+        background-image:
+          repeating-linear-gradient(
+            90deg,
+            rgba(196, 137, 79, 0.16) 0 1px,
+            transparent 1px 26px
+          ),
+          linear-gradient(180deg, #17223f, #0b132b);
+      }
+      .t2 {
+        background-image:
+          repeating-linear-gradient(
+            45deg,
+            rgba(196, 137, 79, 0.16) 0 1px,
+            transparent 1px 22px
+          ),
+          linear-gradient(180deg, #1a2438, #0b132b);
+      }
+      .t3 {
+        background-image:
+          linear-gradient(rgba(196, 137, 79, 0.14) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(196, 137, 79, 0.14) 1px, transparent 1px),
+          linear-gradient(180deg, #1c2540, #0b132b);
+        background-size:
+          32px 32px,
+          32px 32px,
+          100% 100%;
+      }
+      #drawer {
+        visibility: hidden;
+      }
+      #drawer.open {
+        visibility: visible;
+      }
+      #drawer .panel {
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      }
+      #drawer.open .panel {
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white font-sans text-slate-700 antialiased">
+    <svg width="0" height="0" class="absolute" aria-hidden="true">
+      <symbol id="logo" viewBox="0 0 72 44">
+        <path
+          d="M3 42V24l4-3.500V42zM12 42V14l4-3.500V42z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        />
+        <path
+          d="M21 42V3l20 14q3 5-1 10-2 3-6 3H27M33 30l9 12"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.500"
+          stroke-linejoin="round"
+        />
+        <path d="M43 42 56 14 69 42z" fill="#C4894F" />
+        <path d="M52 42l4-9 4 9z" fill="var(--cut,#fff)" />
+      </symbol>
+    </svg>
+
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-[70] focus:bg-gold focus:px-4 focus:py-2 focus:text-navy"
+      >Skip to content</a
+    >
+
+    <!-- Top contact info bar -->
+    <div class="bg-navy text-xs text-slate-300">
+      <div
+        class="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-5 py-2.5 lg:px-10"
+      >
+        <ul class="flex flex-wrap items-center gap-x-6 gap-y-1">
+          <li>
+            <a
+              href="tel:+97140000000"
+              class="flex items-center gap-2 hover:text-white"
+              ><i data-lucide="phone" class="h-3.5 w-3.5 text-gold"></i>+971 4
+              000 0000</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:info@radesignstudio.ae"
+              class="flex items-center gap-2 hover:text-white"
+              ><i data-lucide="mail" class="h-3.5 w-3.5 text-gold"></i
+              >info@radesignstudio.ae</a
+            >
+          </li>
+          <li class="hidden items-center gap-2 md:flex">
+            <i data-lucide="clock" class="h-3.5 w-3.5 text-gold"></i>Sunday to
+            Thursday, 8:30 to 17:30 GST
+          </li>
+        </ul>
+        <a
+          href="index.html#inquiry"
+          class="flex items-center gap-2 font-semibold text-white hover:text-gold"
+          ><span class="relative flex h-2 w-2"
+            ><span
+              class="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"
+            ></span
+            ><span
+              class="relative inline-flex h-2 w-2 rounded-full bg-amber-400"
+            ></span></span
+          >Emergency / RFP desk</a
+        >
+      </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white">
+      <div
+        class="mx-auto flex h-20 max-w-screen-2xl items-center justify-between px-5 lg:px-10"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-3"
+          aria-label="R A Design Studio, home"
+        >
+          <svg
+            class="h-11 w-[68px] text-[#6B6E70]"
+            viewBox="0 0 72 44"
+            aria-hidden="true"
+          >
+            <use href="#logo" />
+          </svg>
+          <span class="leading-none"
+            ><b
+              class="block font-head text-[15px] font-extrabold tracking-[.14em] text-gold"
+              >R A DESIGN STUDIO</b
+            ><span
+              class="mt-1.5 block text-[8px] tracking-[.2em] text-slate-500"
+              >WHERE VISION MEETS ENGINEERING</span
+            ></span
+          >
+        </a>
+        <nav
+          class="hidden items-center gap-9 text-sm font-medium lg:flex"
+          aria-label="Primary"
+        >
+          <a href="index.html" class="py-1 hover:text-gold-d">Home</a>
+          <a href="index.html#about" class="hover:text-gold-d">About Us</a>
+          <div class="group relative flex h-20 items-center">
+            <button
+              type="button"
+              class="flex items-center gap-1.5 hover:text-gold-d"
+              aria-haspopup="true"
+            >
+              Services <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            </button>
+            <ul
+              class="invisible absolute left-0 top-full w-64 border border-slate-200 bg-white py-2 opacity-0 shadow-lg transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100"
+            >
+              <li>
+                <a
+                  href="index.html#services"
+                  class="block px-5 py-2.5 hover:bg-sand hover:text-gold-d"
+                  >Architecture Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#services"
+                  class="block px-5 py-2.5 hover:bg-sand hover:text-gold-d"
+                  >Interior Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#services"
+                  class="block px-5 py-2.5 hover:bg-sand hover:text-gold-d"
+                  >Structural Engineering</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#services"
+                  class="block px-5 py-2.5 hover:bg-sand hover:text-gold-d"
+                  >MEP Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#services"
+                  class="block px-5 py-2.5 hover:bg-sand hover:text-gold-d"
+                  >BIM Modelling</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#services"
+                  class="block px-5 py-2.5 hover:bg-sand hover:text-gold-d"
+                  >Fire &amp; Life Safety</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Active Page Highlight for Projects -->
+          <a
+            href="projects.html"
+            class="border-b-2 border-gold py-1 text-gold-d"
+            aria-current="page"
+            >Sectors / Projects</a
+          >
+          <a href="index.html#inquiry" class="hover:text-gold-d">Contact</a>
+        </nav>
+        <a href="index.html#inquiry" class="btn-g hidden lg:inline-flex"
+          >Request Technical RFP
+          <i data-lucide="arrow-right" class="h-4 w-4"></i
+        ></a>
+        <button
+          id="menu"
+          type="button"
+          class="flex h-11 w-11 items-center justify-center border border-slate-300 lg:hidden"
+          aria-label="Open menu"
+          aria-controls="drawer"
+          aria-expanded="false"
+        >
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div
+      id="drawer"
+      class="fixed inset-0 z-[60] lg:hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile menu"
+    >
+      <div class="absolute inset-0 bg-navy/70" data-close></div>
+      <div
+        class="panel absolute right-0 top-0 flex h-full w-[88%] max-w-sm flex-col overflow-y-auto bg-white"
+      >
+        <div
+          class="flex h-20 items-center justify-between border-b border-slate-200 px-5"
+        >
+          <span
+            class="font-head text-sm font-extrabold tracking-[.14em] text-gold"
+            >R A DESIGN STUDIO</span
+          >
+          <button
+            type="button"
+            class="flex h-11 w-11 items-center justify-center border border-slate-300"
+            data-close
+            aria-label="Close menu"
+          >
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+        <nav class="flex-1 px-5 py-4 text-base font-medium" aria-label="Mobile">
+          <a href="index.html" class="block border-b border-slate-200 py-4"
+            >Home</a
+          >
+          <a
+            href="index.html#about"
+            class="block border-b border-slate-200 py-4"
+            >About Us</a
+          >
+          <button
+            id="acc"
+            type="button"
+            class="flex w-full items-center justify-between border-b border-slate-200 py-4"
+            aria-expanded="false"
+            aria-controls="sub"
+          >
+            Services
+            <i
+              data-lucide="chevron-down"
+              class="h-5 w-5 transition-transform"
+            ></i>
+          </button>
+          <ul
+            id="sub"
+            class="hidden border-b border-slate-200 bg-sand px-4 py-2 text-sm"
+          >
+            <li>
+              <a href="index.html#services" class="block py-2.5"
+                >Architecture Services</a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="block py-2.5"
+                >Interior Design</a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="block py-2.5"
+                >Structural Engineering</a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="block py-2.5">MEP Design</a>
+            </li>
+            <li>
+              <a href="index.html#services" class="block py-2.5"
+                >BIM Modelling</a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="block py-2.5"
+                >Fire &amp; Life Safety</a
+              >
+            </li>
+          </ul>
+          <!-- Active Page Highlight for Mobile Projects -->
+          <a
+            href="projects.html"
+            class="block border-b border-slate-200 py-4 text-gold-d"
+            aria-current="page"
+            >Sectors / Projects</a
+          >
+          <a
+            href="index.html#inquiry"
+            class="block border-b border-slate-200 py-4"
+            >Contact</a
+          >
+        </nav>
+        <div class="p-5">
+          <a href="index.html#inquiry" class="btn-g w-full"
+            >Consult an Engineer
+            <i data-lucide="arrow-right" class="h-4 w-4"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main">
+      <!-- Projects Hero Banner -->
+      <section class="relative overflow-hidden bg-navy text-white">
+        <div class="grid-bg absolute inset-0" aria-hidden="true"></div>
+        <div
+          class="absolute inset-y-0 right-0 hidden w-[55%] lg:block"
+          aria-hidden="true"
+        >
+          <img
+            src="images/residential-apartment-1.jpg"
+            alt=""
+            class="h-full w-full object-cover opacity-80"
+            onerror="this.remove()"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-navy via-navy/50 to-transparent"
+          ></div>
+        </div>
+        <div
+          class="relative mx-auto grid max-w-screen-2xl items-center gap-10 px-5 pb-14 pt-12 lg:grid-cols-12 lg:px-10 lg:pb-20 lg:pt-20"
+        >
+          <div class="lg:col-span-7">
+            <nav aria-label="Breadcrumb" class="text-xs text-slate-400">
+              <a href="index.html" class="hover:text-gold">Home</a> /
+              <span class="text-white" aria-current="page">Projects</span>
+            </nav>
+            <p class="eyebrow mt-8 text-gold">
+              Our engineering &amp; design portfolio
+            </p>
+            <h1
+              class="mt-5 font-head text-4xl font-extrabold leading-[1.06] sm:text-5xl xl:text-7xl"
+            >
+              Global Project Footprint
+            </h1>
+            <span class="mt-8 block h-px w-14 bg-gold"></span>
+            <p
+              class="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg"
+            >
+              Commercial, hospitality, residential, luxury villas and clean
+              energy industrial infrastructure engineered from our Dubai
+              headquarters and delivered across Qatar, India, Oman and the GCC.
+            </p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="#portfolio" class="btn-g"
+                >View Projects <i data-lucide="arrow-down" class="h-4 w-4"></i
+              ></a>
+              <a href="index.html#inquiry" class="btn-o"
+                >Request Technical RFP</a
+              >
+            </div>
+          </div>
+        </div>
+        <dl
+          class="relative mx-auto grid max-w-screen-2xl grid-cols-3 gap-px border-t border-slate-800 bg-slate-800"
+        >
+          <div class="bg-navy px-5 py-6 lg:px-10 lg:py-8">
+            <dd class="font-head text-3xl font-bold">6</dd>
+            <dt class="mt-1 text-xs text-slate-400">Featured projects</dt>
+          </div>
+          <div class="bg-navy px-5 py-6 lg:px-10 lg:py-8">
+            <dd class="font-head text-3xl font-bold">4</dd>
+            <dt class="mt-1 text-xs text-slate-400">Project locations</dt>
+          </div>
+          <div class="bg-navy px-5 py-6 lg:px-10 lg:py-8">
+            <dd class="font-head text-3xl font-bold">100%</dd>
+            <dt class="mt-1 text-xs text-slate-400">Quality delivery</dt>
+          </div>
+        </dl>
+      </section>
+
+      <!-- Portfolio Filterable Grid Section -->
+      <section id="portfolio" class="py-16 lg:py-24">
+        <div class="mx-auto max-w-screen-2xl px-5 lg:px-10">
+          <div
+            class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end"
+          >
+            <div>
+              <p class="eyebrow text-gold-d">Featured projects</p>
+              <h2
+                class="mt-3 font-head text-3xl font-bold text-ink sm:text-4xl"
+              >
+                Selected work across regional locations
+              </h2>
+            </div>
+            <!-- Country / Location Filter Buttons -->
+            <div
+              class="flex flex-wrap gap-2"
+              role="group"
+              aria-label="Filter projects by country"
+            >
+              <button
+                type="button"
+                data-f="all"
+                aria-pressed="true"
+                class="border border-slate-300 px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-gold aria-pressed:border-navy aria-pressed:bg-navy aria-pressed:text-white"
+              >
+                All (6)
+              </button>
+              <button
+                type="button"
+                data-f="Qatar"
+                aria-pressed="false"
+                class="border border-slate-300 px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-gold aria-pressed:border-navy aria-pressed:bg-navy aria-pressed:text-white"
+              >
+                Qatar (2)
+              </button>
+              <button
+                type="button"
+                data-f="India"
+                aria-pressed="false"
+                class="border border-slate-300 px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-gold aria-pressed:border-navy aria-pressed:bg-navy aria-pressed:text-white"
+              >
+                India (3)
+              </button>
+              <button
+                type="button"
+                data-f="Oman"
+                aria-pressed="false"
+                class="border border-slate-300 px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-gold aria-pressed:border-navy aria-pressed:bg-navy aria-pressed:text-white"
+              >
+                Oman (1)
+              </button>
+            </div>
+          </div>
+
+          <!-- Featured Project Showcase Slideshow -->
+          <div
+            class="relative mt-10 overflow-hidden rounded-sm border border-slate-800 bg-navy shadow-2xl"
+            id="showcase-slider"
+          >
+            <div
+              class="relative h-[440px] sm:h-[500px] lg:h-[560px] w-full overflow-hidden"
+              id="showcase-track"
+            >
+              <!-- Slide 1: Commercial Office -->
+              <div
+                class="showcase-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 z-10"
+                data-index="0"
+              >
+                <img
+                  src="images/commercial-office.jpg"
+                  alt="Commercial Office Doha Qatar"
+                  class="h-full w-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent"
+                ></div>
+                <div
+                  class="absolute inset-x-0 bottom-0 p-6 sm:p-10 lg:p-12 z-20 flex flex-col justify-end max-w-3xl"
+                >
+                  <span
+                    class="inline-flex items-center gap-1.5 rounded-sm bg-gold px-3 py-1 text-xs font-bold text-navy w-fit"
+                  >
+                    <i data-lucide="map-pin" class="h-3.5 w-3.5"></i>Doha, Qatar
+                    &middot; Commercial High-Rise
+                  </span>
+                  <h3
+                    class="mt-3 font-head text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white"
+                  >
+                    Commercial Corporate Office
+                  </h3>
+                  <!-- <p class="mt-2 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+                    Structural and building services engineering for a prestigious corporate office development in Doha, engineered for long-span efficiency and authority clearance.
+                  </p> -->
+                  <div class="mt-6 flex flex-wrap items-center gap-4">
+                    <a
+                      href="index.html#inquiry"
+                      class="btn-g text-xs sm:text-sm py-2.5 sm:py-3 px-5 sm:px-6"
+                      >Discuss Similar Project
+                      <i data-lucide="arrow-right" class="h-4 w-4"></i
+                    ></a>
+                    <a
+                      href="#projects-grid"
+                      class="btn-o text-xs sm:text-sm py-2.5 sm:py-3 px-5 sm:px-6"
+                      >View All Projects
+                      <i data-lucide="arrow-down" class="h-4 w-4"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2: Hotel Apartment -->
+              <div
+                class="showcase-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0 pointer-events-none"
+                data-index="1"
+              >
+                <img
+                  src="images/hotel-apartment-1.jpg"
+                  alt="Hotel Apartment Maharashtra India"
+                  class="h-full w-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent"
+                ></div>
+                <div
+                  class="absolute inset-x-0 bottom-0 p-6 sm:p-10 lg:p-12 z-20 flex flex-col justify-end max-w-3xl"
+                >
+                  <span
+                    class="inline-flex items-center gap-1.5 rounded-sm bg-gold px-3 py-1 text-xs font-bold text-navy w-fit"
+                  >
+                    <i data-lucide="map-pin" class="h-3.5 w-3.5"></i
+                    >Maharashtra, India &middot; Hospitality
+                  </span>
+                  <h3
+                    class="mt-3 font-head text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white"
+                  >
+                    Serviced Hotel Apartment
+                  </h3>
+                  <!-- <p class="mt-2 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+                    Comprehensive structural, architecture, and MEP design for a high-efficiency serviced hotel apartment complex delivering luxury guest hospitality.
+                  </p> -->
+                  <div class="mt-6 flex flex-wrap items-center gap-4">
+                    <a
+                      href="index.html#inquiry"
+                      class="btn-g text-xs sm:text-sm py-2.5 sm:py-3 px-5 sm:px-6"
+                      >Discuss Similar Project
+                      <i data-lucide="arrow-right" class="h-4 w-4"></i
+                    ></a>
+                    <a
+                      href="#projects-grid"
+                      class="btn-o text-xs sm:text-sm py-2.5 sm:py-3 px-5 sm:px-6"
+                      >View All Projects
+                      <i data-lucide="arrow-down" class="h-4 w-4"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3: LNG Pump Station -->
+              <div
+                class="showcase-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0 pointer-events-none"
+                data-index="2"
+              >
+                <img
+                  src="images/lng-pump-station.jpg"
+                  alt="LNG Pump Station Clean Energy Maharashtra India"
+                  class="h-full w-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent"
+                ></div>
+                <div
+                  class="absolute inset-x-0 bottom-0 p-6 sm:p-10 lg:p-12 z-20 flex flex-col justify-end max-w-3xl"
+                >
+                  <span
+                    class="inline-flex items-center gap-1.5 rounded-sm bg-gold px-3 py-1 text-xs font-bold text-navy w-fit"
+                  >
+                    <i data-lucide="map-pin" class="h-3.5 w-3.5"></i
+                    >Maharashtra, India &middot; Clean Energy &amp; Utilities
+                  </span>
+                  <h3
+                    class="mt-3 font-head text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white"
+                  >
+                    Clean Energy LNG &amp; EV Station
+                  </h3>
+
+                  <div class="mt-6 flex flex-wrap items-center gap-4">
+                    <a
+                      href="index.html#inquiry"
+                      class="btn-g text-xs sm:text-sm py-2.5 sm:py-3 px-5 sm:px-6"
+                      >Discuss Similar Project
+                      <i data-lucide="arrow-right" class="h-4 w-4"></i
+                    ></a>
+                    <a
+                      href="#projects-grid"
+                      class="btn-o text-xs sm:text-sm py-2.5 sm:py-3 px-5 sm:px-6"
+                      >View All Projects
+                      <i data-lucide="arrow-down" class="h-4 w-4"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 4: Residential Apartment -->
+              <div
+                class="showcase-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0 pointer-events-none"
+                data-index="3"
+              >
+                <img
+                  src="images/residential-apartment.jpg"
+                  alt="Residential Apartment Oman"
+                  class="h-full w-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent"
+                ></div>
+                <div
+                  class="absolute inset-x-0 bottom-0 p-6 sm:p-10 lg:p-12 z-20 flex flex-col justify-end max-w-3xl"
+                >
+                  <span
+                    class="inline-flex items-center gap-1.5 rounded-sm bg-gold px-3 py-1 text-xs font-bold text-navy w-fit"
+                  >
+                    <i data-lucide="map-pin" class="h-3.5 w-3.5"></i>Oman
+                    &middot; Residential Towers
+                  </span>
+                  <h3
+                    class="mt-3 font-head text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white"
+                  >
+                    Residential Apartment Towers
+                  </h3>
+                  <div class="mt-6 flex flex-wrap items-center gap-4">
+                    <a
+                      href="index.html#inquiry"
+                      class="btn-g text-xs sm:text-sm py-2.5 sm:py-3 px-5 sm:px-6"
+                      >Discuss Similar Project
+                      <i data-lucide="arrow-right" class="h-4 w-4"></i
+                    ></a>
+                    <a
+                      href="#projects-grid"
+                      class="btn-o text-xs sm:text-sm py-2.5 sm:py-3 px-5 sm:px-6"
+                      >View All Projects
+                      <i data-lucide="arrow-down" class="h-4 w-4"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 5: Beachfront Resort -->
+              <div
+                class="showcase-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0 pointer-events-none"
+                data-index="4"
+              >
+                <img
+                  src="images/beach-resort.jpg"
+                  alt="Beachfront Resort Goa India"
+                  class="h-full w-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent"
+                ></div>
+                <div
+                  class="absolute inset-x-0 bottom-0 p-6 sm:p-10 lg:p-12 z-20 flex flex-col justify-end max-w-3xl"
+                >
+                  <span
+                    class="inline-flex items-center gap-1.5 rounded-sm bg-gold px-3 py-1 text-xs font-bold text-navy w-fit"
+                  >
+                    <i data-lucide="map-pin" class="h-3.5 w-3.5"></i>Goa, India
+                    &middot; Coastal Hospitality
+                  </span>
+                  <h3
+                    class="mt-3 font-head text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white"
+                  >
+                    Beachfront Resort &amp; Spa
+                  </h3>
+                  <div class="mt-6 flex flex-wrap items-center gap-4">
+                    <a
+                      href="index.html#inquiry"
+                      class="btn-g text-xs sm:text-sm py-2.5 sm:py-3 px-5 sm:px-6"
+                      >Discuss Similar Project
+                      <i data-lucide="arrow-right" class="h-4 w-4"></i
+                    ></a>
+                    <a
+                      href="#projects-grid"
+                      class="btn-o text-xs sm:text-sm py-2.5 sm:py-3 px-5 sm:px-6"
+                      >View All Projects
+                      <i data-lucide="arrow-down" class="h-4 w-4"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 6: Luxury Villa -->
+              <div
+                class="showcase-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0 pointer-events-none"
+                data-index="5"
+              >
+                <img
+                  src="images/luxury-villa.jpg"
+                  alt="Luxury Villa Doha Qatar"
+                  class="h-full w-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent"
+                ></div>
+                <div
+                  class="absolute inset-x-0 bottom-0 p-6 sm:p-10 lg:p-12 z-20 flex flex-col justify-end max-w-3xl"
+                >
+                  <span
+                    class="inline-flex items-center gap-1.5 rounded-sm bg-gold px-3 py-1 text-xs font-bold text-navy w-fit"
+                  >
+                    <i data-lucide="map-pin" class="h-3.5 w-3.5"></i>Doha, Qatar
+                    &middot; Luxury Residential
+                  </span>
+                  <h3
+                    class="mt-3 font-head text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white"
+                  >
+                    Contemporary Luxury Villa
+                  </h3>
+                  <div class="mt-6 flex flex-wrap items-center gap-4">
+                    <a
+                      href="index.html#inquiry"
+                      class="btn-g text-xs sm:text-sm py-2.5 sm:py-3 px-5 sm:px-6"
+                      >Discuss Similar Project
+                      <i data-lucide="arrow-right" class="h-4 w-4"></i
+                    ></a>
+                    <a
+                      href="#projects-grid"
+                      class="btn-o text-xs sm:text-sm py-2.5 sm:py-3 px-5 sm:px-6"
+                      >View All Projects
+                      <i data-lucide="arrow-down" class="h-4 w-4"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Showcase Controls -->
+            <button
+              type="button"
+              id="showcase-prev"
+              class="absolute left-4 top-1/2 -translate-y-1/2 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-md border border-slate-600 transition-all hover:bg-gold hover:text-navy hover:border-gold hover:scale-105 active:scale-95"
+              aria-label="Previous project slide"
+            >
+              <i data-lucide="chevron-left" class="h-6 w-6"></i>
+            </button>
+            <button
+              type="button"
+              id="showcase-next"
+              class="absolute right-4 top-1/2 -translate-y-1/2 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-md border border-slate-600 transition-all hover:bg-gold hover:text-navy hover:border-gold hover:scale-105 active:scale-95"
+              aria-label="Next project slide"
+            >
+              <i data-lucide="chevron-right" class="h-6 w-6"></i>
+            </button>
+
+            <!-- Counter & Dots -->
+            <div
+              class="absolute bottom-5 right-6 sm:right-10 z-30 flex items-center gap-3"
+            >
+              <span
+                id="showcase-counter"
+                class="rounded-sm bg-navy/85 backdrop-blur-sm border border-slate-700 px-3 py-1 text-xs font-semibold text-slate-200"
+              >
+                1 / 6
+              </span>
+              <div
+                class="hidden sm:flex items-center gap-1.5 bg-navy/85 backdrop-blur-sm border border-slate-700 rounded-full px-3 py-1.5"
+                id="showcase-dots"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Project Gallery Header -->
+          <div
+            id="projects-grid"
+            class="mt-16 flex items-center justify-between"
+          >
+            <div>
+              <h3 class="font-head text-2xl font-bold text-ink">
+                Project Photo Galleries
+              </h3>
+            </div>
+            <p
+              id="count"
+              class="text-sm font-semibold text-gold-d"
+              aria-live="polite"
+            >
+              Showing 6 projects
+            </p>
+          </div>
+
+          <!-- 4-Location Project Cards Grid with In-Card Slideshows -->
+          <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <!-- 1. Commercial Office - Doha, Qatar -->
+            <article
+              class="group flex flex-col border border-slate-200 bg-white transition-colors hover:border-gold shadow-sm"
+              data-country="Qatar"
+            >
+              <!-- In-Card Image Slideshow -->
+              <div
+                class="relative aspect-[4/3] overflow-hidden bg-slate-900 select-none"
+                data-card-slideshow
+              >
+                <div class="slides-wrapper relative h-full w-full">
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100 z-10"
+                    data-slide-index="0"
+                  >
+                    <img
+                      src="images/commercial-office-1-sm.jpg"
+                      alt="Commercial Office, Doha Qatar - Exterior Elevation"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none"
+                    data-slide-index="1"
+                  >
+                    <img
+                      src="images/commercial-office-2-sm.jpg"
+                      alt="Commercial Office, Doha Qatar - Architectural Angle"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <!-- Location Badge (Top Left) -->
+                <span
+                  class="pointer-events-none absolute left-3 top-3 z-20 inline-flex items-center gap-1.5 bg-navy/90 backdrop-blur-sm px-2.5 py-1 text-xs font-semibold text-white shadow-sm"
+                >
+                  <i data-lucide="map-pin" class="h-3.5 w-3.5 text-gold"></i
+                  >Doha, Qatar
+                </span>
+
+                <!-- Live Counter (Top Right) -->
+                <span
+                  class="slide-counter pointer-events-none absolute right-3 top-3 z-20 inline-flex items-center rounded-sm bg-navy/85 backdrop-blur-sm px-2 py-0.5 text-[11px] font-semibold text-slate-200 shadow-sm"
+                >
+                  1 / 2
+                </span>
+
+                <!-- Navigation Controls -->
+                <button
+                  type="button"
+                  class="slide-btn-prev absolute left-2 top-1/2 z-20 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-sm opacity-80 transition-all hover:opacity-100 hover:bg-gold hover:text-navy hover:scale-110 active:scale-95"
+                  aria-label="Previous photo"
+                >
+                  <i data-lucide="chevron-left" class="h-4 w-4"></i>
+                </button>
+                <button
+                  type="button"
+                  class="slide-btn-next absolute right-2 top-1/2 z-20 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-sm opacity-80 transition-all hover:opacity-100 hover:bg-gold hover:text-navy hover:scale-110 active:scale-95"
+                  aria-label="Next photo"
+                >
+                  <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                </button>
+
+                <!-- Indicator Dots -->
+                <div
+                  class="slide-dots absolute bottom-2.5 inset-x-0 z-20 flex justify-center items-center gap-1.5"
+                >
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-5 rounded-full bg-gold transition-all"
+                    data-to="0"
+                    aria-label="Photo 1"
+                  ></button>
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-2 rounded-full bg-white/60 hover:bg-white transition-all"
+                    data-to="1"
+                    aria-label="Photo 2"
+                  ></button>
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col p-6">
+                <h3 class="mt-2 font-head text-xl font-bold text-ink">
+                  Commercial Office
+                </h3>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+                  Structural and building services engineering for a prestigious
+                  corporate office development in Doha.
+                </p>
+                <a
+                  href="index.html#inquiry"
+                  class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-d"
+                  >Discuss a similar project
+                  <span class="transition-transform group-hover:translate-x-1"
+                    >→</span
+                  ></a
+                >
+              </div>
+            </article>
+
+            <!-- 2. Hotel Apartment - Maharashtra, India -->
+            <article
+              class="group flex flex-col border border-slate-200 bg-white transition-colors hover:border-gold shadow-sm"
+              data-country="India"
+            >
+              <!-- In-Card Image Slideshow -->
+              <div
+                class="relative aspect-[4/3] overflow-hidden bg-slate-900 select-none"
+                data-card-slideshow
+              >
+                <div class="slides-wrapper relative h-full w-full">
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100 z-10"
+                    data-slide-index="0"
+                  >
+                    <img
+                      src="images/hotel-apartment-1-sm.jpg"
+                      alt="Hotel Apartment, Maharashtra India - Main Render"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none"
+                    data-slide-index="1"
+                  >
+                    <img
+                      src="images/hotel-apartment-2-sm.jpg"
+                      alt="Hotel Apartment, Maharashtra India - Detail Angle"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none"
+                    data-slide-index="2"
+                  >
+                    <img
+                      src="images/hotel-apartment-3-sm.jpg"
+                      alt="Hotel Apartment, Maharashtra India - Aerial Perspective"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <!-- Location Badge (Top Left) -->
+                <span
+                  class="pointer-events-none absolute left-3 top-3 z-20 inline-flex items-center gap-1.5 bg-navy/90 backdrop-blur-sm px-2.5 py-1 text-xs font-semibold text-white shadow-sm"
+                >
+                  <i data-lucide="map-pin" class="h-3.5 w-3.5 text-gold"></i
+                  >Maharashtra, India
+                </span>
+
+                <!-- Live Counter (Top Right) -->
+                <span
+                  class="slide-counter pointer-events-none absolute right-3 top-3 z-20 inline-flex items-center rounded-sm bg-navy/85 backdrop-blur-sm px-2 py-0.5 text-[11px] font-semibold text-slate-200 shadow-sm"
+                >
+                  1 / 3
+                </span>
+
+                <!-- Navigation Controls -->
+                <button
+                  type="button"
+                  class="slide-btn-prev absolute left-2 top-1/2 z-20 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-sm opacity-80 transition-all hover:opacity-100 hover:bg-gold hover:text-navy hover:scale-110 active:scale-95"
+                  aria-label="Previous photo"
+                >
+                  <i data-lucide="chevron-left" class="h-4 w-4"></i>
+                </button>
+                <button
+                  type="button"
+                  class="slide-btn-next absolute right-2 top-1/2 z-20 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-sm opacity-80 transition-all hover:opacity-100 hover:bg-gold hover:text-navy hover:scale-110 active:scale-95"
+                  aria-label="Next photo"
+                >
+                  <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                </button>
+
+                <!-- Indicator Dots -->
+                <div
+                  class="slide-dots absolute bottom-2.5 inset-x-0 z-20 flex justify-center items-center gap-1.5"
+                >
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-5 rounded-full bg-gold transition-all"
+                    data-to="0"
+                    aria-label="Photo 1"
+                  ></button>
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-2 rounded-full bg-white/60 hover:bg-white transition-all"
+                    data-to="1"
+                    aria-label="Photo 2"
+                  ></button>
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-2 rounded-full bg-white/60 hover:bg-white transition-all"
+                    data-to="2"
+                    aria-label="Photo 3"
+                  ></button>
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col p-6">
+                <!-- <p class="text-xs font-semibold text-gold-d">
+                  Hospitality &middot; Architectural, Structural, MEP
+                </p> -->
+                <h3 class="mt-2 font-head text-xl font-bold text-ink">
+                  Hotel Apartment
+                </h3>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+                  Comprehensive structural, architecture, and MEP design for a
+                  high-efficiency serviced hotel apartment complex.
+                </p>
+                <a
+                  href="index.html#inquiry"
+                  class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-d"
+                  >Discuss a similar project
+                  <span class="transition-transform group-hover:translate-x-1"
+                    >→</span
+                  ></a
+                >
+              </div>
+            </article>
+
+            <!-- 3. LNG Pump Station - Maharashtra, India -->
+            <article
+              class="group flex flex-col border border-slate-200 bg-white transition-colors hover:border-gold shadow-sm"
+              data-country="India"
+            >
+              <!-- In-Card Image Slideshow -->
+              <div
+                class="relative aspect-[4/3] overflow-hidden bg-slate-900 select-none"
+                data-card-slideshow
+              >
+                <div class="slides-wrapper relative h-full w-full">
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100 z-10"
+                    data-slide-index="0"
+                  >
+                    <img
+                      src="images/lng-pump-station-1-sm.jpg"
+                      alt="LNG Pump Station, Maharashtra India - Aerial Site View"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none"
+                    data-slide-index="1"
+                  >
+                    <img
+                      src="images/lng-pump-station-2-sm.jpg"
+                      alt="LNG Pump Station, Maharashtra India - Canopy Bays"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none"
+                    data-slide-index="2"
+                  >
+                    <img
+                      src="images/lng-pump-station-3-sm.jpg"
+                      alt="LNG Pump Station, Maharashtra India - Infrastructure Overview"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <!-- Location Badge (Top Left) -->
+                <span
+                  class="pointer-events-none absolute left-3 top-3 z-20 inline-flex items-center gap-1.5 bg-navy/90 backdrop-blur-sm px-2.5 py-1 text-xs font-semibold text-white shadow-sm"
+                >
+                  <i data-lucide="map-pin" class="h-3.5 w-3.5 text-gold"></i
+                  >Maharashtra, India
+                </span>
+
+                <!-- Live Counter (Top Right) -->
+                <span
+                  class="slide-counter pointer-events-none absolute right-3 top-3 z-20 inline-flex items-center rounded-sm bg-navy/85 backdrop-blur-sm px-2 py-0.5 text-[11px] font-semibold text-slate-200 shadow-sm"
+                >
+                  1 / 3
+                </span>
+
+                <!-- Navigation Controls -->
+                <button
+                  type="button"
+                  class="slide-btn-prev absolute left-2 top-1/2 z-20 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-sm opacity-80 transition-all hover:opacity-100 hover:bg-gold hover:text-navy hover:scale-110 active:scale-95"
+                  aria-label="Previous photo"
+                >
+                  <i data-lucide="chevron-left" class="h-4 w-4"></i>
+                </button>
+                <button
+                  type="button"
+                  class="slide-btn-next absolute right-2 top-1/2 z-20 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-sm opacity-80 transition-all hover:opacity-100 hover:bg-gold hover:text-navy hover:scale-110 active:scale-95"
+                  aria-label="Next photo"
+                >
+                  <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                </button>
+
+                <!-- Indicator Dots -->
+                <div
+                  class="slide-dots absolute bottom-2.5 inset-x-0 z-20 flex justify-center items-center gap-1.5"
+                >
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-5 rounded-full bg-gold transition-all"
+                    data-to="0"
+                    aria-label="Photo 1"
+                  ></button>
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-2 rounded-full bg-white/60 hover:bg-white transition-all"
+                    data-to="1"
+                    aria-label="Photo 2"
+                  ></button>
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-2 rounded-full bg-white/60 hover:bg-white transition-all"
+                    data-to="2"
+                    aria-label="Photo 3"
+                  ></button>
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col p-6">
+                <h3 class="mt-2 font-head text-xl font-bold text-ink">
+                  LNG Pump Station
+                </h3>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+                  Clean energy refueling infrastructure, solar canopy design,
+                  logistics depot, and cryogenic mechanical systems.
+                </p>
+                <a
+                  href="index.html#inquiry"
+                  class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-d"
+                  >Discuss a similar project
+                  <span class="transition-transform group-hover:translate-x-1"
+                    >→</span
+                  ></a
+                >
+              </div>
+            </article>
+
+            <!-- 4. Residential Apartment - Oman -->
+            <article
+              class="group flex flex-col border border-slate-200 bg-white transition-colors hover:border-gold shadow-sm"
+              data-country="Oman"
+            >
+              <!-- In-Card Image Slideshow -->
+              <div
+                class="relative aspect-[4/3] overflow-hidden bg-slate-900 select-none"
+                data-card-slideshow
+              >
+                <div class="slides-wrapper relative h-full w-full">
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100 z-10"
+                    data-slide-index="0"
+                  >
+                    <img
+                      src="images/residential-apartment-1-sm.jpg"
+                      alt="Residential Apartment, Oman - Tower Render"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none"
+                    data-slide-index="1"
+                  >
+                    <img
+                      src="images/residential-apartment-2-sm.jpg"
+                      alt="Residential Apartment, Oman - Facade Detail"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none"
+                    data-slide-index="2"
+                  >
+                    <img
+                      src="images/residential-apartment-3-sm.jpg"
+                      alt="Residential Apartment, Oman - Podium View"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <!-- Location Badge (Top Left) -->
+                <span
+                  class="pointer-events-none absolute left-3 top-3 z-20 inline-flex items-center gap-1.5 bg-navy/90 backdrop-blur-sm px-2.5 py-1 text-xs font-semibold text-white shadow-sm"
+                >
+                  <i data-lucide="map-pin" class="h-3.5 w-3.5 text-gold"></i
+                  >Oman
+                </span>
+
+                <!-- Live Counter (Top Right) -->
+                <span
+                  class="slide-counter pointer-events-none absolute right-3 top-3 z-20 inline-flex items-center rounded-sm bg-navy/85 backdrop-blur-sm px-2 py-0.5 text-[11px] font-semibold text-slate-200 shadow-sm"
+                >
+                  1 / 3
+                </span>
+
+                <!-- Navigation Controls -->
+                <button
+                  type="button"
+                  class="slide-btn-prev absolute left-2 top-1/2 z-20 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-sm opacity-80 transition-all hover:opacity-100 hover:bg-gold hover:text-navy hover:scale-110 active:scale-95"
+                  aria-label="Previous photo"
+                >
+                  <i data-lucide="chevron-left" class="h-4 w-4"></i>
+                </button>
+                <button
+                  type="button"
+                  class="slide-btn-next absolute right-2 top-1/2 z-20 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-sm opacity-80 transition-all hover:opacity-100 hover:bg-gold hover:text-navy hover:scale-110 active:scale-95"
+                  aria-label="Next photo"
+                >
+                  <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                </button>
+
+                <!-- Indicator Dots -->
+                <div
+                  class="slide-dots absolute bottom-2.5 inset-x-0 z-20 flex justify-center items-center gap-1.5"
+                >
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-5 rounded-full bg-gold transition-all"
+                    data-to="0"
+                    aria-label="Photo 1"
+                  ></button>
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-2 rounded-full bg-white/60 hover:bg-white transition-all"
+                    data-to="1"
+                    aria-label="Photo 2"
+                  ></button>
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-2 rounded-full bg-white/60 hover:bg-white transition-all"
+                    data-to="2"
+                    aria-label="Photo 3"
+                  ></button>
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col p-6">
+                <h3 class="mt-2 font-head text-xl font-bold text-ink">
+                  Residential Apartment
+                </h3>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+                  Multidisciplinary structural engineering, federated BIM
+                  coordination, and building services for modern apartment
+                  towers in Oman.
+                </p>
+                <a
+                  href="index.html#inquiry"
+                  class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-d"
+                  >Discuss a similar project
+                  <span class="transition-transform group-hover:translate-x-1"
+                    >→</span
+                  ></a
+                >
+              </div>
+            </article>
+
+            <!-- 5. Resort - Goa, India -->
+            <article
+              class="group flex flex-col border border-slate-200 bg-white transition-colors hover:border-gold shadow-sm"
+              data-country="India"
+            >
+              <!-- In-Card Image Slideshow -->
+              <div
+                class="relative aspect-[4/3] overflow-hidden bg-slate-900 select-none"
+                data-card-slideshow
+              >
+                <div class="slides-wrapper relative h-full w-full">
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100 z-10"
+                    data-slide-index="0"
+                  >
+                    <img
+                      src="images/resort-1-sm.jpg"
+                      alt="Beachfront Resort, Goa India - Luxury Villas"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none"
+                    data-slide-index="1"
+                  >
+                    <img
+                      src="images/resort-2-sm.jpg"
+                      alt="Beachfront Resort, Goa India - Landscape Pool"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none"
+                    data-slide-index="2"
+                  >
+                    <img
+                      src="images/resort-3-sm.jpg"
+                      alt="Beachfront Resort, Goa India - Coastal View"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <!-- Location Badge (Top Left) -->
+                <span
+                  class="pointer-events-none absolute left-3 top-3 z-20 inline-flex items-center gap-1.5 bg-navy/90 backdrop-blur-sm px-2.5 py-1 text-xs font-semibold text-white shadow-sm"
+                >
+                  <i data-lucide="map-pin" class="h-3.5 w-3.5 text-gold"></i
+                  >Goa, India
+                </span>
+
+                <!-- Live Counter (Top Right) -->
+                <span
+                  class="slide-counter pointer-events-none absolute right-3 top-3 z-20 inline-flex items-center rounded-sm bg-navy/85 backdrop-blur-sm px-2 py-0.5 text-[11px] font-semibold text-slate-200 shadow-sm"
+                >
+                  1 / 3
+                </span>
+
+                <!-- Navigation Controls -->
+                <button
+                  type="button"
+                  class="slide-btn-prev absolute left-2 top-1/2 z-20 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-sm opacity-80 transition-all hover:opacity-100 hover:bg-gold hover:text-navy hover:scale-110 active:scale-95"
+                  aria-label="Previous photo"
+                >
+                  <i data-lucide="chevron-left" class="h-4 w-4"></i>
+                </button>
+                <button
+                  type="button"
+                  class="slide-btn-next absolute right-2 top-1/2 z-20 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-sm opacity-80 transition-all hover:opacity-100 hover:bg-gold hover:text-navy hover:scale-110 active:scale-95"
+                  aria-label="Next photo"
+                >
+                  <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                </button>
+
+                <!-- Indicator Dots -->
+                <div
+                  class="slide-dots absolute bottom-2.5 inset-x-0 z-20 flex justify-center items-center gap-1.5"
+                >
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-5 rounded-full bg-gold transition-all"
+                    data-to="0"
+                    aria-label="Photo 1"
+                  ></button>
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-2 rounded-full bg-white/60 hover:bg-white transition-all"
+                    data-to="1"
+                    aria-label="Photo 2"
+                  ></button>
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-2 rounded-full bg-white/60 hover:bg-white transition-all"
+                    data-to="2"
+                    aria-label="Photo 3"
+                  ></button>
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col p-6">
+                <!-- <p class="text-xs font-semibold text-gold-d">
+                  Hospitality &middot; Architectural, Interior, MEP
+                </p> -->
+                <h3 class="mt-2 font-head text-xl font-bold text-ink">
+                  Beachfront Resort
+                </h3>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+                  Eco-conscious architectural and building systems engineering
+                  for a luxury coastal resort destination in Goa.
+                </p>
+                <a
+                  href="index.html#inquiry"
+                  class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-d"
+                  >Discuss a similar project
+                  <span class="transition-transform group-hover:translate-x-1"
+                    >→</span
+                  ></a
+                >
+              </div>
+            </article>
+
+            <!-- 6. Luxury Villa - Doha, Qatar -->
+            <article
+              class="group flex flex-col border border-slate-200 bg-white transition-colors hover:border-gold shadow-sm"
+              data-country="Qatar"
+            >
+              <!-- In-Card Image Slideshow -->
+              <div
+                class="relative aspect-[4/3] overflow-hidden bg-slate-900 select-none"
+                data-card-slideshow
+              >
+                <div class="slides-wrapper relative h-full w-full">
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100 z-10"
+                    data-slide-index="0"
+                  >
+                    <img
+                      src="images/villa-1-sm.jpg"
+                      alt="Luxury Villa, Doha Qatar - Modern Facade"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div
+                    class="slide absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0 z-0 pointer-events-none"
+                    data-slide-index="1"
+                  >
+                    <img
+                      src="images/villa-2-sm.jpg"
+                      alt="Luxury Villa, Doha Qatar - Architectural Detail"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <!-- Location Badge (Top Left) -->
+                <span
+                  class="pointer-events-none absolute left-3 top-3 z-20 inline-flex items-center gap-1.5 bg-navy/90 backdrop-blur-sm px-2.5 py-1 text-xs font-semibold text-white shadow-sm"
+                >
+                  <i data-lucide="map-pin" class="h-3.5 w-3.5 text-gold"></i
+                  >Doha, Qatar
+                </span>
+
+                <!-- Live Counter (Top Right) -->
+                <span
+                  class="slide-counter pointer-events-none absolute right-3 top-3 z-20 inline-flex items-center rounded-sm bg-navy/85 backdrop-blur-sm px-2 py-0.5 text-[11px] font-semibold text-slate-200 shadow-sm"
+                >
+                  1 / 2
+                </span>
+
+                <!-- Navigation Controls -->
+                <button
+                  type="button"
+                  class="slide-btn-prev absolute left-2 top-1/2 z-20 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-sm opacity-80 transition-all hover:opacity-100 hover:bg-gold hover:text-navy hover:scale-110 active:scale-95"
+                  aria-label="Previous photo"
+                >
+                  <i data-lucide="chevron-left" class="h-4 w-4"></i>
+                </button>
+                <button
+                  type="button"
+                  class="slide-btn-next absolute right-2 top-1/2 z-20 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy/80 text-white backdrop-blur-sm opacity-80 transition-all hover:opacity-100 hover:bg-gold hover:text-navy hover:scale-110 active:scale-95"
+                  aria-label="Next photo"
+                >
+                  <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                </button>
+
+                <!-- Indicator Dots -->
+                <div
+                  class="slide-dots absolute bottom-2.5 inset-x-0 z-20 flex justify-center items-center gap-1.5"
+                >
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-5 rounded-full bg-gold transition-all"
+                    data-to="0"
+                    aria-label="Photo 1"
+                  ></button>
+                  <button
+                    type="button"
+                    class="dot h-1.5 w-2 rounded-full bg-white/60 hover:bg-white transition-all"
+                    data-to="1"
+                    aria-label="Photo 2"
+                  ></button>
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col p-6">
+                <!-- <p class="text-xs font-semibold text-gold-d">
+                  Luxury Residential &middot; Architecture, Interior, Structural
+                </p> -->
+                <h3 class="mt-2 font-head text-xl font-bold text-ink">
+                  Luxury Private Villa
+                </h3>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+                  Bespoke architectural styling, interior layouts, and long-span
+                  structural engineering for an executive villa in Doha.
+                </p>
+                <a
+                  href="index.html#inquiry"
+                  class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-d"
+                  >Discuss a similar project
+                  <span class="transition-transform group-hover:translate-x-1"
+                    >→</span
+                  ></a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Custom Consultation CTA Section -->
+      <section class="bg-ink py-16 text-white lg:py-20">
+        <div
+          class="mx-auto flex max-w-screen-2xl flex-col justify-between gap-8 px-5 lg:flex-row lg:items-center lg:px-10"
+        >
+          <div class="max-w-2xl">
+            <p class="eyebrow text-gold">Let's build together</p>
+            <h2 class="mt-3 font-head text-3xl font-bold sm:text-4xl">
+              Request a custom engineering consultation
+            </h2>
+            <p class="mt-4 text-base leading-relaxed text-slate-300">
+              Tell us about your site, sector, and programme. A senior engineer
+              will review the scope and reply within one working day.
+            </p>
+          </div>
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <a href="index.html#inquiry" class="btn-g"
+              >Consult an Engineer
+              <i data-lucide="arrow-right" class="h-4 w-4"></i
+            ></a>
+            <a href="tel:+97140000000" class="btn-o"
+              ><i data-lucide="phone" class="h-4 w-4"></i>+971 4 000 0000</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating WhatsApp CTA Button -->
+    <a
+      href="https://wa.me/971500000000?text=Hello%20R%20A%20Design%20Studio%2C%20I%20would%20like%20to%20discuss%20an%20engineering%20project."
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat with us on WhatsApp"
+      class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105"
+      ><i data-lucide="message-circle" class="h-6 w-6"></i
+    ></a>
+
+    <!-- Footer - 100% Aligned with Homepage -->
+    <footer class="bg-ink text-sm text-slate-400" style="--cut: #0f172a">
+      <div
+        class="mx-auto grid max-w-screen-2xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-12 lg:px-10"
+      >
+        <div id="about" class="lg:col-span-5">
+          <a
+            href="index.html"
+            class="flex items-center gap-3"
+            aria-label="R A Design Studio, home"
+          >
+            <svg
+              class="h-11 w-[68px] text-slate-400"
+              viewBox="0 0 72 44"
+              aria-hidden="true"
+            >
+              <use href="#logo" />
+            </svg>
+            <b
+              class="font-head text-[15px] font-extrabold tracking-[.14em] text-gold"
+              >R A DESIGN STUDIO</b
+            >
+          </a>
+          <div
+            class="mt-5 max-w-lg space-y-3 text-xs leading-relaxed text-slate-300"
+          >
+            <h3 class="font-head text-sm font-bold text-white">About Us</h3>
+            <p>
+              <strong class="font-semibold text-gold">Goal:</strong> We are
+              committed in providing high quality standard Architecture,
+              Interior &amp; Engineering consultancy services in line to the
+              present market demands and client expectations. Create economical
+              and innovative designs using the most up to date advance tech to
+              ensure efficiency and value for money of our clients.
+            </p>
+            <p>
+              <strong class="font-semibold text-gold">Vision:</strong> To become
+              benchmark consultancy firm for Architecture, Interior and
+              Engineering service to our clients in UAE, KSA &amp; GCC
+              countries. R A Design provides innovative designs driven by
+              integrity, teamwork of our professional team.
+            </p>
+          </div>
+        </div>
+        <div class="lg:col-span-2">
+          <h3 class="font-head text-sm font-bold text-white">Services</h3>
+          <ul class="mt-4 space-y-2.5">
+            <li>
+              <a href="index.html#services" class="hover:text-gold"
+                >Architecture Services</a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="hover:text-gold"
+                >Interior Design</a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="hover:text-gold"
+                >Structural Engineering</a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="hover:text-gold"
+                >MEP Design</a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="hover:text-gold"
+                >BIM Modelling</a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="hover:text-gold"
+                >Fire &amp; Life Safety</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="lg:col-span-2">
+          <h3 class="font-head text-sm font-bold text-white">Quick Links</h3>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="index.html" class="hover:text-gold">Home</a></li>
+            <li>
+              <a href="index.html#about" class="hover:text-gold">About Us</a>
+            </li>
+            <li>
+              <a
+                href="projects.html"
+                class="hover:text-gold text-gold font-medium"
+                >Sectors / Projects</a
+              >
+            </li>
+            <li>
+              <a href="index.html#inquiry" class="hover:text-gold">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <h3 class="font-head text-sm font-bold text-white">
+            Registered office
+          </h3>
+          <address class="mt-4 space-y-2.5 not-italic">
+            <p>
+              Office 1204, Business Bay, Dubai, United Arab Emirates<br />P.O.
+              Box 000000
+            </p>
+            <p>
+              <a href="tel:+97140000000" class="hover:text-gold"
+                >+971 4 000 0000</a
+              ><br /><a
+                href="mailto:info@radesignstudio.ae"
+                class="hover:text-gold"
+                >info@radesignstudio.ae</a
+              >
+            </p>
+            <p>Sunday to Thursday, 8:30 to 17:30 GST</p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-slate-800">
+        <div
+          class="mx-auto flex max-w-screen-2xl flex-col gap-3 px-5 py-6 text-xs lg:flex-row lg:justify-between lg:px-10"
+        >
+          <p class="max-w-3xl">
+            Information on this website is general in nature and is not a
+            professional engineering opinion or a contractual offer. All designs
+            remain subject to the approval of the relevant UAE authorities.
+          </p>
+          <p class="shrink-0">© 2026 R A Design Studio. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+      lucide.createIcons();
+      const $ = (s) => document.querySelector(s);
+      const drawer = $("#drawer"),
+        menu = $("#menu");
+      const toggle = (open) => {
+        drawer.classList.toggle("open", open);
+        menu.setAttribute("aria-expanded", open);
+        document.body.classList.toggle("overflow-hidden", open);
+      };
+      menu.addEventListener("click", () => toggle(true));
+      drawer.addEventListener("click", (e) => {
+        if (e.target.closest("[data-close]") || e.target.closest("a"))
+          toggle(false);
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") toggle(false);
+      });
+      $("#acc").addEventListener("click", (e) => {
+        const hidden = $("#sub").classList.toggle("hidden");
+        e.currentTarget.setAttribute("aria-expanded", !hidden);
+        e.currentTarget
+          .querySelector("svg")
+          .classList.toggle("rotate-180", !hidden);
+      });
+
+      // Filter chips logic
+      const chips = document.querySelectorAll("[data-f]"),
+        cards = document.querySelectorAll("[data-country]");
+      chips.forEach((b) =>
+        b.addEventListener("click", () => {
+          const f = b.dataset.f;
+          chips.forEach((c) => c.setAttribute("aria-pressed", c === b));
+          let n = 0;
+          cards.forEach((a) => {
+            const show = f === "all" || a.dataset.country === f;
+            a.classList.toggle("hidden", !show);
+            if (show) n++;
+          });
+          $("#count").textContent =
+            "Showing " + n + (n === 1 ? " project" : " projects");
+        }),
+      );
+
+      // Featured Project Showcase Slideshow
+      (function initShowcase() {
+        const track = $("#showcase-track");
+        if (!track) return;
+        const slides = track.querySelectorAll(".showcase-slide");
+        const dotsContainer = $("#showcase-dots");
+        const prevBtn = $("#showcase-prev");
+        const nextBtn = $("#showcase-next");
+        const counter = $("#showcase-counter");
+        let current = 0;
+        let timer = null;
+
+        // Render dots
+        if (dotsContainer) {
+          dotsContainer.innerHTML = "";
+          slides.forEach((_, i) => {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = `h-2 rounded-full transition-all duration-300 ${
+              i === 0 ? "w-6 bg-gold" : "w-2 bg-white/50 hover:bg-white"
+            }`;
+            btn.setAttribute("aria-label", `Go to project ${i + 1}`);
+            btn.addEventListener("click", () => {
+              goTo(i);
+              resetAuto();
+            });
+            dotsContainer.appendChild(btn);
+          });
+        }
+
+        const dots = dotsContainer
+          ? dotsContainer.querySelectorAll("button")
+          : [];
+
+        function goTo(idx) {
+          slides[current].classList.remove("opacity-100", "z-10");
+          slides[current].classList.add(
+            "opacity-0",
+            "z-0",
+            "pointer-events-none",
+          );
+          if (dots[current]) {
+            dots[current].className =
+              "h-2 w-2 rounded-full bg-white/50 hover:bg-white transition-all duration-300";
+          }
+
+          current = (idx + slides.length) % slides.length;
+
+          slides[current].classList.remove(
+            "opacity-0",
+            "z-0",
+            "pointer-events-none",
+          );
+          slides[current].classList.add("opacity-100", "z-10");
+          if (dots[current]) {
+            dots[current].className =
+              "h-2 w-6 rounded-full bg-gold transition-all duration-300";
+          }
+          if (counter) {
+            counter.textContent = `${current + 1} / ${slides.length}`;
+          }
+        }
+
+        function next() {
+          goTo(current + 1);
+        }
+        function prev() {
+          goTo(current - 1);
+        }
+
+        if (prevBtn)
+          prevBtn.addEventListener("click", () => {
+            prev();
+            resetAuto();
+          });
+        if (nextBtn)
+          nextBtn.addEventListener("click", () => {
+            next();
+            resetAuto();
+          });
+
+        function startAuto() {
+          timer = setInterval(next, 5500);
+        }
+        function stopAuto() {
+          if (timer) clearInterval(timer);
+        }
+        function resetAuto() {
+          stopAuto();
+          startAuto();
+        }
+
+        const showcaseSlider = $("#showcase-slider");
+        if (showcaseSlider) {
+          showcaseSlider.addEventListener("mouseenter", stopAuto);
+          showcaseSlider.addEventListener("mouseleave", startAuto);
+
+          let startX = 0;
+          showcaseSlider.addEventListener(
+            "touchstart",
+            (e) => {
+              startX = e.touches[0].clientX;
+              stopAuto();
+            },
+            { passive: true },
+          );
+          showcaseSlider.addEventListener("touchend", (e) => {
+            const diff = e.changedTouches[0].clientX - startX;
+            if (Math.abs(diff) > 40) {
+              if (diff < 0) next();
+              else prev();
+            }
+            startAuto();
+          });
+        }
+
+        startAuto();
+      })();
+
+      // In-Card Project Slideshows
+      (function initCardSlideshows() {
+        const cardSliders = document.querySelectorAll("[data-card-slideshow]");
+        cardSliders.forEach((slider) => {
+          const slides = slider.querySelectorAll("[data-slide-index]");
+          const dots = slider.querySelectorAll(".dot");
+          const counter = slider.querySelector(".slide-counter");
+          const prevBtn = slider.querySelector(".slide-btn-prev");
+          const nextBtn = slider.querySelector(".slide-btn-next");
+          if (!slides.length) return;
+
+          let active = 0;
+          let cardTimer = null;
+
+          function showSlide(idx) {
+            slides[active].classList.remove("opacity-100", "z-10");
+            slides[active].classList.add(
+              "opacity-0",
+              "z-0",
+              "pointer-events-none",
+            );
+            if (dots[active]) {
+              dots[active].className =
+                "dot h-1.5 w-2 rounded-full bg-white/60 hover:bg-white transition-all";
+            }
+
+            active = (idx + slides.length) % slides.length;
+
+            slides[active].classList.remove(
+              "opacity-0",
+              "z-0",
+              "pointer-events-none",
+            );
+            slides[active].classList.add("opacity-100", "z-10");
+            if (dots[active]) {
+              dots[active].className =
+                "dot h-1.5 w-5 rounded-full bg-gold transition-all";
+            }
+            if (counter) {
+              counter.textContent = `${active + 1} / ${slides.length}`;
+            }
+          }
+
+          function nextSlide() {
+            showSlide(active + 1);
+          }
+          function prevSlide() {
+            showSlide(active - 1);
+          }
+
+          if (prevBtn) {
+            prevBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              e.preventDefault();
+              prevSlide();
+            });
+          }
+          if (nextBtn) {
+            nextBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              e.preventDefault();
+              nextSlide();
+            });
+          }
+
+          dots.forEach((dot, dIdx) => {
+            dot.addEventListener("click", (e) => {
+              e.stopPropagation();
+              e.preventDefault();
+              showSlide(dIdx);
+            });
+          });
+
+          // Touch swipe support
+          let touchX = 0;
+          slider.addEventListener(
+            "touchstart",
+            (e) => {
+              touchX = e.touches[0].clientX;
+            },
+            { passive: true },
+          );
+          slider.addEventListener("touchend", (e) => {
+            const delta = e.changedTouches[0].clientX - touchX;
+            if (Math.abs(delta) > 35) {
+              if (delta < 0) nextSlide();
+              else prevSlide();
+            }
+          });
+
+          // Optional hover cycle
+          slider.addEventListener("mouseenter", () => {
+            if (slides.length > 1) {
+              cardTimer = setInterval(nextSlide, 2600);
+            }
+          });
+          slider.addEventListener("mouseleave", () => {
+            if (cardTimer) clearInterval(cardTimer);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
